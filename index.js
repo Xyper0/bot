@@ -11,8 +11,11 @@ const ownerNumber = process.env.OWNER;
 
 const client = new Client({
     authStrategy: new LocalAuth(),
+    puppeteer: {
+        executablePath: '/usr/bin/chromium-browser', 
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
 });
-
 
 const commands = new Map();
 

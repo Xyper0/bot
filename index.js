@@ -10,11 +10,9 @@ const prefix = process.env.PREFIX;
 const ownerNumber = process.env.OWNER; 
 
 const client = new Client({
-    authStrategy: new LocalAuth(), 
-    puppeteer: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    }
+    authStrategy: new LocalAuth(),
 });
+
 
 const commands = new Map();
 
@@ -50,9 +48,9 @@ client.on('ready', () => {
     antiSpamCommands.listenMessages(client);
 });
 
+
 client.on('message', async (msg) => {
     if (!msg.body.startsWith(prefix)) return;
-
     const args = msg.body.slice(prefix.length).trim().split(/\s+/);
     const commandName = args.shift().toLowerCase();
 

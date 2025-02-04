@@ -15,6 +15,7 @@ module.exports = {
             let userId;
             if (msg.hasQuotedMsg) {
                 const quotedMsg = await msg.getQuotedMessage();
+                if(!quotedMsg) return; 
                 userId = quotedMsg.author;
             } 
             else if (msg.mentionedIds.length + 1 > 0) {

@@ -11,6 +11,9 @@ const ownerNumber = process.env.OWNER;
 
 const client = new Client({
     authStrategy: new LocalAuth(),
+        puppeteer: {
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        }
 });
 
 const commands = new Map();
@@ -37,9 +40,7 @@ commandHandler('./commands');
 client.commands = commands;
 
 client.on('qr', (qr) => {
-    qrcode.generate(qr, { small: true }, function (Generate_qr) {
-        console.log(Generate_qr);
-    });
+console.log(qr)
 });
 
 client.on('ready', () => {

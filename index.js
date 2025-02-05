@@ -40,7 +40,9 @@ commandHandler('./commands');
 client.commands = commands;
 
 client.on('qr', (qr) => {
-console.log(qr)
+qrcode.generate(qr, {small:true} , function (qrcode) {
+    console.log(qrcode)
+})
 });
 
 client.on('ready', () => {

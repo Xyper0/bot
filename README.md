@@ -1,45 +1,46 @@
-📱 WhatsApp Bot - Group Management
+#  📱 WhatsApp Bot - Group Management
 
-✨ Features
-Anti-Spam System
-Auto-Lock Schedule
-Warning System (3 warnings = kick)
-Admin Commands
+##  ✨ Features
+**Anti-Spam System<br>
+Auto-Lock Schedule<br>
+Warning System (3 warnings = kick)<br>
+Admin Commands**
 
-⚙️ Setup
+##  ⚙️ Setup
 Create .env:
+```
 PREFIX=!
 OWNER=BOT_OWNER_NUMBER@c.us
 MONGO_URL=DATABASE_URL
-
-📋 Commands
-Command	Description
-!antispam on/off	Anti-spam toggle
-!autolock on/off	Auto-lock toggle
-!chat	Lock/unlock chat
-!warn @user [reason]	Warn user
-!check @user	Check warnings
-!clear @user	Clear warnings
-!delete	Delete & kick (reply)
-!mention	@everyone
-!setdesc [text]	Set description
-!commands	Show commands
-!usage [cmd]	Command help
-
-
-📁 Structure
-
-commands/groups/     # Group commands
-commands/owner/      # Owner commands
-database/models/     # MongoDB schemas
+```
+##  📋 Commands
+**Command	Description<br>
+!antispam on/off	Anti-spam toggle<br>
+!autolock on/off	Auto-lock toggle<br>
+!chat	Lock/unlock chat<br>
+!warn @user [reason]	Warn user<br>
+!check @user	Check warnings<br>
+!clear @user	Clear warnings<br>
+!delete	Delete & kick (reply)<br>
+!mention	@everyone<br>
+!setdesc [text]	Set description<br>
+!commands	Show commands<br>
+!usage [cmd]	Command help**
 
 
-📦 Dependencies
+##  📁 Structure
 
+**commands/groups/     # Group commands<br>
+commands/owner/      # Owner commands<br>
+database/models/     # MongoDB schemas<br>**
+
+
+##  📦 Dependencies
+```
 npm i whatsapp-web.js mongoose qrcode-terminal dotenv node-schedule
+```
 
-
-⚠️ Notes
-Bot must be admin
-MongoDB required
-Owner number format: OWNER_NUMBER_HERE@c.us
+##  ⚠️ Notes
+**Bot must be admin<br>
+MongoDB required<br>
+Owner number format: OWNER_NUMBER_HERE@c.us<br>**
